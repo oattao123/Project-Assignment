@@ -1,38 +1,7 @@
 import math 
 class Node:
-    """ 
-        This class used to represent each Vertex in the graph 
-        ...
-        Attributes
-        ----------
-        value : str
-            Represent the value of the node
-        neighbors : list
-            A list with the nodes the current node is connected
-        length_from_previous_node
-            The weight of the edge from the previous node
-        previous_node
-            Represents the previous node
-        visited
-            Indicates whether the node has been visited or not
-        ...
-        Methods
-        -------
-        has_neighbors(self) -> Boolean
-            Check if the current node is connected with other nodes (return True). Otherwise return False
-        number_of_neighbors(self) -> int
-            Calculate and return the number the of the neighbors 
-        add_neighboor(self, neighboor) -> None
-            Add a new neighbor in the list of neighbors
-        __eq__(self, other) -> Boolean
-            Determines if two nodes are equal or not, checking their values
-        __gt__(self, other) -> Boolean
-            Determines which of the node is greater than the other
-        __str__(self) -> str
-            Returns the node and the previous node in the produced tree
-    """
 
-    def __init__(self, value, neighbors=None):
+    def __init__(self, value, neighbors=None): #กำหนดตัวแปรในกราฟ
         self.value = value
         if neighbors is None:
             self.neighbors = []
@@ -43,11 +12,7 @@ class Node:
         self.visited = False
 
 
-    def has_neighbors(self):
-        """
-            Return True if the current node is connected with at least another node.
-            Otherwiese return false
-        """
+    def has_neighbors(self): 
         if len(self.neighbors) == 0:
             return False
         return True

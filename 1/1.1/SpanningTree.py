@@ -17,9 +17,7 @@ class Graph1:
 			parent[i] = self.find(parent, parent[i])
 		return parent[i]
 
-	# A function that does union of two sets of x and y
-	# (uses union by rank)
-	def union(self, parent, rank, x, y): # 
+	def union(self, parent, rank, x, y): 
 
 		# หาคู่ของจุดยอดสองที่น้อยด้วยการเปรียบเทียบ
 		if rank[x] < rank[y]:
@@ -32,8 +30,6 @@ class Graph1:
 			parent[y] = x
 			rank[x] += 1
 
-	# The main function to construct MST using Kruskal's
-		# algorithm
 	def KruskalMST(self):
 		result = []
 		parent = []
@@ -62,7 +58,7 @@ class Graph1:
 
 
 		minimumCost = 0
-		print("Edges in the constructed MST")
+		print("Edges in the constructed MST") 
 		for u, v, weight in result: 
 			minimumCost += weight
 			print("%d -- %d == %d" % (u, v, weight))
