@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-class Graph1:
+class Graph:
 
 	def __init__(self, vertices): # หาจุดยอด 
 		self.V = vertices 
@@ -8,7 +8,7 @@ class Graph1:
 
 
 	
-	def addEdge1(self, u, v, w): # กำหนดจุดสองจุดและค่าของจุด
+	def add_edge(self, u, v, w): # กำหนดจุดสองจุดและค่าของจุด
 		self.graph.append([u, v, w])
 
 
