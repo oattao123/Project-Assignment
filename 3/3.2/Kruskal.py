@@ -59,7 +59,7 @@ class Graph1:
 
 		minimumCost = 0
 		print("Edges in the constructed MST") 
-		for u, v, weight in result: 
+		for u, v, weight in result:  #พิมพ์เส้นทาง
 			minimumCost += weight
 			print("%d -- %d == %d" % (u, v, weight))
 		print("Minimum Spanning Tree", minimumCost)

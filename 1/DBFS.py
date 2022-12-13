@@ -26,7 +26,7 @@ class Graph:
         while queue: 
             s = queue.pop(0)
             print (s, end = " ")
-            for i in self.graph[s]:
+            for i in self.graph[s]: #ตรวจสอบหาเส้นทางที่น้อยที่สุด
                 if visited[i] == False:
                     queue.append(i)
                     visited[i] = True
